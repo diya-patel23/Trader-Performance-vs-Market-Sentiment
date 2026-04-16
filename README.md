@@ -1,7 +1,7 @@
-# Trader Performance vs Market Sentiment — Hyperliquid × Fear/Greed Index
+# Trader Performance vs Market Sentiment - Hyperliquid × Fear/Greed Index
 
-**Assignment:** Primetrade.ai Data Science Intern — Round-0  
-**Dataset Period:** May 2023 – May 2025  
+**Assignment:** Primetrade.ai Data Science Intern - Round-0  
+**Dataset Period:** May 2023 - May 2025  
 **Trades Analysed:** ~174,000 (perpetuals only)  
 **Unique Traders:** 32 accounts
 
@@ -28,7 +28,7 @@ jupyter notebook trader_sentiment_analysis.ipynb
 
 1. **Data Cleaning:** Loaded both CSVs, parsed timestamps (IST format `DD-MM-YYYY HH:MM`), aligned on daily date keys. Filtered perpetual trades only (excluded spot dust, settlements, liquidations). No missing values found in either dataset.
 
-2. **Feature Engineering:** Computed per-trader daily metrics — total PnL, win rate, trade count, avg position size, long/short ratio. Also created binary sentiment flag (Fear/Greed/Neutral).
+2. **Feature Engineering:** Computed per-trader daily metrics - total PnL, win rate, trade count, avg position size, long/short ratio. Also created binary sentiment flag (Fear/Greed/Neutral).
 
 3. **Analysis:** 
    - t-tests for statistical significance of PnL differences across sentiment regimes
@@ -51,9 +51,9 @@ jupyter notebook trader_sentiment_analysis.ipynb
 
 ## Strategy Recommendations
 
-**Strategy 1 — "Fear is Alpha":**  
+**Strategy 1 - "Fear is Alpha":**  
 During Fear days (index < 40), Moderate and Winning Traders should increase trade frequency ~30% and maintain long bias (~55%). This is historically when the highest PnL is captured.
 
-**Strategy 2 — "Greed Caution":**  
+**Strategy 2 - "Greed Caution":**  
 During Greed days (index > 60), Losing Traders should cut position sizes by 30% and avoid chasing momentum longs. Their win rate drops to 36% and average PnL turns negative in this regime.
 
